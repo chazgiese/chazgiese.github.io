@@ -1,0 +1,38 @@
+# Site
+name: Chaz Giese
+title: Chaz Giese
+description: Product design for humans, like you!
+url: https://work.chazgie.se/
+baseurl: ""
+email: chazgiese@gmail.com
+social:
+  - title: email
+    url: mailto:chazgiese@gmail.com
+  - title: linkedin
+    url: https://linkedin.com/in/chazgiese
+
+# Build
+markdown: kramdown
+sass:
+  style: compressed
+exclude:
+  - 'Gemfile.lock'
+  - 'Gemfile'
+  - 'gulpfile.babel.js'
+  - 'node_modules'
+  - 'package-lock.json'
+  - 'package.json'
+  - 'README.md'
+  - 'src'
+
+# Collections
+collections:
+  projects:
+    output: true
+
+# Layouts
+defaults:
+  - scope:
+      path: ''
+    values:
+      layout: 'default'
