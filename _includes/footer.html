@@ -1,0 +1,19 @@
+  <footer>
+    <div class="container grid-lg">
+      <div class="columns">
+        <div class="column col-6 col-md-12">
+          <div class="link-group">
+              <a class="btn btn-link" href="/">Index</a>
+            {% for link in site.social %}
+              <a class="btn btn-link" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.title }}</a>
+            {% endfor %}
+          </div>
+          <div class="column col-6 col-md-12">
+            <p>© 2018 Chaz Giese</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>

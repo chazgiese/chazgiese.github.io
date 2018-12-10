@@ -11,9 +11,7 @@ const paths = {
   styles: {
     src: 'src/styles/styles.scss',
     dest: 'assets/css/',
-    partials: {
-      src: 'src/styles/**/*.scss'
-    }
+    partials: { src: 'src/styles/**/*.scss' }
   },
   scripts: {
     src: 'src/scripts/*.js',
