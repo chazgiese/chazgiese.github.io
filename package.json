@@ -1,0 +1,47 @@
+{
+  "name": "chazgiese.github.io",
+  "version": "1.0.0",
+  "description": "Chaz Giese's personal portfolio site",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chazgiese/chazgiese.github.io.git"
+  },
+  "keywords": [
+    "Chaz",
+    "Giese",
+    "Portfolio",
+    "Jekyll",
+    "NPM",
+    "Gulp"
+  ],
+  "author": "Chaz Giese",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chazgiese/chazgiese.github.io/issues"
+  },
+  "homepage": "https://github.com/chazgiese/chazgiese.github.io#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/register": "^7.0.0",
+    "@types/gulp": "^4.0.5",
+    "@types/gulp-babel": "^6.1.29",
+    "@types/gulp-concat": "0.0.32",
+    "@types/gulp-imagemin": "^4.1.1",
+    "@types/gulp-rename": "0.0.33",
+    "@types/gulp-sass": "0.0.31",
+    "@types/gulp-uglify": "^3.0.6",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1"
+  }
+}

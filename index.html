@@ -1,165 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-
-  <!-- Common metas -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Index | Chaz Giese</title>
-<meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Index" />
-<meta name="author" content="Chaz Giese" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Chaz Giese Hi—I design digital experiences with a focus on purpose &amp; beauty. In my free-time I enjoy inspecting the element, scrolling with both hands, and collecting browser tabs. Brooklyn, NY Email Dribbble LinkedIn" />
-<meta property="og:description" content="Chaz Giese Hi—I design digital experiences with a focus on purpose &amp; beauty. In my free-time I enjoy inspecting the element, scrolling with both hands, and collecting browser tabs. Brooklyn, NY Email Dribbble LinkedIn" />
-<link rel="canonical" href="https://chazgie.se/index" />
-<meta property="og:url" content="https://chazgie.se/index" />
-<meta property="og:site_name" content="Chaz Giese" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-12-11T18:09:20-05:00" />
-<script type="application/ld+json">
-{"description":"Chaz Giese Hi—I design digital experiences with a focus on purpose &amp; beauty. In my free-time I enjoy inspecting the element, scrolling with both hands, and collecting browser tabs. Brooklyn, NY Email Dribbble LinkedIn","author":{"@type":"Person","name":"Chaz Giese"},"@type":"BlogPosting","url":"https://chazgie.se/index","headline":"Index","dateModified":"2018-12-11T18:09:20-05:00","datePublished":"2018-12-11T18:09:20-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://chazgie.se/index"},"@context":"http://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-
-
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <link rel="shortcut icon" href="/assets/favicon.ico">
-
-  <!-- CSS files -->
-  <link rel="stylesheet" href="/assets/main.css">
-
-</head>
-
-
-  <body class="site">
-
-    <main aria-label="Content">
-      <div class="main-hero">
-    <div class="panel panel--top">
-      <div class="panel__item">
+---
+---
+<header class="hero">
+  <div class="container grid-lg">
+    <div class="columns">
+      <div class="column col-6 col-md-12">
         <h1>Chaz Giese</h1>
-      </div>
-      <div class="panel__item panel__item--about">
-        <p>Hi—I design digital experiences with a focus on purpose & beauty. In my free-time I enjoy inspecting the element, scrolling with both hands, and collecting browser tabs.</p>
-      </div>
-    </div>
-    <div class="panel panel--bottom">
-      <div class="panel__item">
-        <span>Brooklyn, NY</span>
-      </div>
-      <div class="panel__item panel__item--links">
-        <div>
-          
-            <div>
-              <a href="mailto:chazgiese@gmail.com" >Email</a>
-            </div>
-          
-            <div>
-              <a href="https://dribbble.com/chazgiese" target="_blank" rel="noopener">Dribbble</a>
-            </div>
-          
-            <div>
-              <a href="https://linkedin.com/in/chazgiese" target="_blank" rel="noopener">LinkedIn</a>
-            </div>
-          
+        <p>
+          Hi—I design digital experiences with a focus on fun & beauty. In my freetime I enjoy inspecting the element, scrolling with both hands, and collecting browser tabs.
+        </p>
+        <div class="link-group">
+          {% for link in site.social %}
+            <a class="btn btn-link" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.title }}</a>
+          {% endfor %}
         </div>
       </div>
+      <div class="column col-6 col-md-12">
+        <img class="img-responsive" src="{{ site.url | append: '/assets/images/intro6-2x.gif' }}" alt="">
+      </div>
     </div>
+  </div>
+</header>
+
+<div class="container grid-lg">
+  <div class="project-grid columns">
+    <a class="col-6 col-sm-12" href="{{ site.url }}/projects/black-lab-3">
+      <img src="{{ site.url }}/assets/images/thumbnail_black-lab-3.jpg" alt="Black Lab 3">
+    </a>
+    <a class="col-6 col-sm-12" href="{{ site.url }}/projects/remind-plse">
+      <img src="{{ site.url }}/assets/images/thumbnail_remind-plse.jpg" alt="RemindPlse">
+    </a>
+    <a class="col-6 col-sm-12" href="{{ site.url }}/projects/plus-minus">
+      <img src="{{ site.url }}/assets/images/thumbnail_plus-minus.jpg" alt="Plus/Minus">
+    </a>
+    <a class="col-6 col-sm-12" href="{{ site.url }}/projects/on-air">
+      <img src="{{ site.url }}/assets/images/thumbnail_on-air.jpg" alt="On-Air">
+    </a>
+    <a class="col-6 col-sm-12" href="{{ site.url }}/projects/emojigen">
+      <img src="{{ site.url }}/assets/images/thumbnail_emojigen.jpg" alt="EmojiGen">
+    </a>
+    <a class="col-6 col-sm-12" href="./projects/nue-scrolls">
+      <img src="{{ site.url }}/assets/images/thumbnail_nue-scrolls.jpg" alt="Nue Scrolls">
+    </a>
+  </div>
 </div>
-
-<section class="uk-section">
-  <div class="uk-container">
-    <div class="uk-grid uk-grid-small uk-child-width-1-2 uk-child-width-1-3@l" uk-grid>
-      
-        <div uk-scrollspy="cls:uk-animation-slide-bottom-medium; delay: 125">
-          <a href="/projects/black-lab-3">
-            <img src="/assets/thumbnail_black-lab-3.jpg" alt="Black Lab 3">
-          </a>
-        </div>
-      
-        <div uk-scrollspy="cls:uk-animation-slide-bottom-medium; delay: 125">
-          <a href="/projects/remind-plse">
-            <img src="/assets/thumbnail_remind-plse.jpg" alt="RemindPlse">
-          </a>
-        </div>
-      
-        <div uk-scrollspy="cls:uk-animation-slide-bottom-medium; delay: 125">
-          <a href="/projects/on-air">
-            <img src="/assets/thumbnail_on-air.jpg" alt="On-Air">
-          </a>
-        </div>
-      
-        <div uk-scrollspy="cls:uk-animation-slide-bottom-medium; delay: 125">
-          <a href="/projects/plus-minus">
-            <img src="/assets/thumbnail_plus-minus.jpg" alt="Plus/Minus">
-          </a>
-        </div>
-      
-        <div uk-scrollspy="cls:uk-animation-slide-bottom-medium; delay: 125">
-          <a href="/projects/emojigen">
-            <img src="/assets/thumbnail_emojigen.jpg" alt="EmojiGen">
-          </a>
-        </div>
-      
-        <div uk-scrollspy="cls:uk-animation-slide-bottom-medium; delay: 125">
-          <a href="/projects/nue-scrolls">
-            <img src="/assets/thumbnail_nue-scrolls.jpg" alt="Nue Scrolls">
-          </a>
-        </div>
-      
-    </div>
-  </div>
-</section>
-
-    </main>
-
-    <footer class="uk-section-small uk-section-muted uk-margin-medium-top">
-  <div class="uk-container uk-container-small">
-    <nav class="uk-navbar-container" uk-navbar>
-      <div class="uk-navbar-left">
-        <ul class="uk-navbar-nav">
-          <li><a href="/" title="Home page">Chaz Giese</a></li>
-          
-            <li><a href="mailto:chazgiese@gmail.com" >Email</a></li>
-          
-            <li><a href="https://dribbble.com/chazgiese" target="_blank" rel="noopener">Dribbble</a></li>
-          
-            <li><a href="https://linkedin.com/in/chazgiese" target="_blank" rel="noopener">LinkedIn</a></li>
-          
-        </ul>
-      </div>
-      <div class="uk-navbar-center">
-
-      </div>
-      <div class="uk-navbar-right">
-        <ul class="uk-navbar-nav">
-          <li>© 2018 Chaz Giese</li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-</footer>
-
-<!-- JS files -->
-<script src="/assets/main.js"></script>
-
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-25650802-5', 'auto');
-  ga('send', 'pageview');
-</script>
-
-
-
-  </body>
-
-</html>
