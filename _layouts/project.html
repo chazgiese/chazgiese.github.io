@@ -1,19 +1,20 @@
-{% include header.html %}
-<header class="navbar">
-  <section class="navbar-section">
-    <a href="/" class="btn btn-link">Index</a>
-  </section>
-  <section class="navbar-center">
-    <a href="/">Chaz Giese</a>
-  </section>
-  <section class="navbar-section">
-    {% for link in site.social %}
-      <a class="btn btn-link" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.title }}</a>
-    {% endfor %}
-  </section>
-</header>
+---
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: page.lang | default: 'en' }}">
 
-<div class="container grid-md project-page">
-  {{ content }}
-</div>
-{% include footer.html %}
+  {% include head.html %}
+
+  <body class="site">
+
+    {% include header.html %}
+
+    <main aria-label="Content">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

@@ -1,0 +1,149 @@
+//
+// Assets
+//
+
+$directory-font:  "../fonts" !default;
+$directory-image: "../img" !default;
+
+
+//
+// Color system
+//
+
+$white:  #ffffff !default;
+$black:  #1A1A1A !default;
+$grey:   #d1d1d1 !default;
+$red:    #e53935 !default;
+$green:  #9ccc65 !default;
+
+$grey-100: #212529 !default;
+$grey-200: #3e3e3e !default;
+$grey-300: #737373 !default;
+$grey-400: #a6a6a6 !default;
+$grey-500: $grey   !default;
+$grey-600: #e6e6e6 !default;
+$grey-700: #f6f6f6 !default;
+$grey-800: #f6f6f6 !default;
+$grey-900: #f6f6f6 !default;
+
+$brand-primary:   $white !default;
+$brand-secondary: $black !default;
+
+
+//
+// Spacing
+//
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3)
+) !default;
+
+// This variable affects the `.h-*` and `.w-*` classes
+$sizes: (
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+) !default;
+
+
+//
+// Body
+//
+
+$body-bg: $black !default;
+$body-color: $white !default;
+
+
+//
+// Links
+//
+
+$link-color: $body-color !default;
+$link-hover-color: darken($link-color, 20%) !default;
+
+
+//
+// Container & breakpoints
+//
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 20px !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+
+//
+// Common component variables
+//
+
+$border-width: 1px !default;
+
+$border-radius: .25rem !default;
+
+$transition-speed: .3s !default;
+$transition-ease:  ease-in-out !default;
+$transition:       all $transition-speed $transition-ease !default;
+
+$disabled-bg:    $grey-700;
+$disabled-color: $grey-500;
+
+//
+// Typography
+// Why: Reused by most components
+//
+
+$font-family-sans-serif: "Proxima Nova", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family:            $font-family-sans-serif !default;
+
+$font-size:    1rem !default;      // 16px
+$font-size-sm: .875rem !default;   // 14px
+$font-size-lg:  1.125rem !default; // 18px
+
+$line-height:    1.5 !default;
+$line-height-sm: 1.5 !default;
+$line-height-lg: 1.5 !default;
+
+
+//
+// Inputs
+// Why: Reused by most form inputs
+//
+
+$inputs-padding-y:   .66rem !default;
+$inputs-line-height: 1.5 !default;
+
+$inputs-padding-y-sm:   .5rem !default;
+$inputs-line-height-sm: 1.5 !default;
+
+$inputs-padding-y-lg:   .75rem !default;
+$inputs-line-height-lg: 1.5 !default;
+
+$inputs-border-width: 2px;
+
+// Used to calculate inputs height
+// (select, button with icons...)
+$input-height: ($font-size * $inputs-line-height) + ($inputs-padding-y * 2);
+$input-height-sm: ($font-size * $inputs-line-height-sm) + ($inputs-padding-y-sm * 2);
+$input-height-lg: ($font-size-lg * $inputs-line-height-lg) + ($inputs-padding-y-lg * 2);

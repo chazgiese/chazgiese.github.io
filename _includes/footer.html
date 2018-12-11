@@ -1,19 +1,36 @@
-  <footer>
-    <div class="container grid-lg">
-      <div class="columns">
-        <div class="column col-6 col-md-12">
-          <div class="link-group">
-              <a class="btn btn-link" href="/">Index</a>
-            {% for link in site.social %}
-              <a class="btn btn-link" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.title }}</a>
-            {% endfor %}
-          </div>
-          <div class="column col-6 col-md-12">
-            <p>© 2018 Chaz Giese</p>
-          </div>
-        </div>
+<footer class="uk-section-small uk-section-muted uk-margin-medium-top">
+  <div class="uk-container uk-container-small">
+    <nav class="uk-navbar-container" uk-navbar>
+      <div class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+          <li><a href="{{ "/" | relative_url }}" title="Home page">{{ site.title | escape }}</a></li>
+          {% for item in site.social %}
+            <li><a href="{{ item.url }}" {{ item.attr }}>{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
       </div>
-    </div>
-  </footer>
-  </body>
-</html>
+      <div class="uk-navbar-center">
+
+      </div>
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+          <li>© 2018 Chaz Giese</li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</footer>
+
+<!-- JS files -->
+<script src="{{ "/assets/main.js" | relative_url }}"></script>
+
+{% if site.google_analytics %}
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '{{ site.google_analytics }}', 'auto');
+  ga('send', 'pageview');
+</script>
+{% endif %}

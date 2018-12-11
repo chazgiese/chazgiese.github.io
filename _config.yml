@@ -1,36 +1,67 @@
-# Site
-name: Chaz Giese
+# Site settings
+# -------------
+
 title: Chaz Giese
-description: Product design for humans, like you!
-url: https://chazgie.se
-baseurl: ""
-email: chazgiese@gmail.com
+description: >-
+  Digital Product Desginer
 social:
   - title: Email
     url: mailto:chazgiese@gmail.com
-  - title: GitHub
-    url: https://github.com/chazgiese
+    attr:
+  - title: Dribbble
+    url: https://dribbble.com/chazgiese
+    attr: target="_blank" rel="noopener"
   - title: LinkedIn
     url: https://linkedin.com/in/chazgiese
+    attr: target="_blank" rel="noopener"
 
-# Build
+# Index Items
+index_items:
+  - title: Black Lab 3
+    url: /projects/black-lab-3
+    thumbnail: /assets/thumbnail_black-lab-3.jpg
+  - title: RemindPlse
+    url: /projects/remind-plse
+    thumbnail: /assets/thumbnail_remind-plse.jpg
+  - title: On-Air
+    url: /projects/on-air
+    thumbnail: /assets/thumbnail_on-air.jpg
+  - title: Plus/Minus
+    url: /projects/plus-minus
+    thumbnail: /assets/thumbnail_plus-minus.jpg
+  - title: EmojiGen
+    url: /projects/emojigen
+    thumbnail: /assets/thumbnail_emojigen.jpg
+  - title: Nue Scrolls
+    url: /projects/nue-scrolls
+    thumbnail: /assets/thumbnail_nue-scrolls.jpg
+
+# Page settings
+url: "https://chazgie.se"
+baseurl: ""
+date_format: "%b %-d, %Y"
+google_analytics: 'UA-25650802-5'
+
+# SEO settings
+email: chazgiese@gmail.com
+author: Chaz Giese
+
+# Navigation settings
+# Add the pages you want to see in the navigation
+navigation:
+  - _pages/react.html
+
+# Build settings
+# --------------
+
+# Default markdown parser
 markdown: kramdown
-sass:
-  style: compressed
-exclude:
-  - 'Gemfile.lock'
-  - 'Gemfile'
-  - 'gulpfile.babel.js'
-  - 'node_modules'
-  - 'package-lock.json'
-  - 'package.json'
-  - 'README.md'
-  - 'src'
-include:
-  - 'favicon.gif'
 
-# Collections
+# Make sure that pages don't end up behind weird urls like:`_pages/myPage.html`
 collections:
+  pages:
+    output: true
+    permalink: /:path
   projects:
     output: true
 
@@ -42,6 +73,31 @@ defaults:
     values:
       layout: "project"
   - scope:
-      path: ''
+      path: ""
     values:
-      layout: 'default'
+      layout: "default"
+
+# Make sure the `_pages/` is processed
+include:
+  - _pages
+
+# Make sure the `_site/assets/` is not trashed (webpack output)
+keep_files:
+  - assets
+
+# List our Jekyll plugins below
+plugins:
+- jekyll-seo-tag
+
+# Exclude from processing (not moved to `_site/`)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package.json
+  - CNAME
+  - LICENSE
+  - README.md
+  - webpack.config.js
+  - "*.lock"
+  - "*.log"

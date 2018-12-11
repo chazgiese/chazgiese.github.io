@@ -1,47 +1,81 @@
 {
-  "name": "chazgiese.github.io",
-  "version": "1.0.0",
-  "description": "Chaz Giese's personal portfolio site",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "name": "clenemt.com",
+  "version": "0.0.1",
+  "description": "Source code for clenemt.com",
+  "email": "clement.moron@gmail.com",
+  "url": "http://www.clenemt.com/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chazgiese/chazgiese.github.io.git"
+    "url": "https://github.com/clenemt/clenemt.com.git"
   },
-  "keywords": [
-    "Chaz",
-    "Giese",
-    "Portfolio",
-    "Jekyll",
-    "NPM",
-    "Gulp"
-  ],
-  "author": "Chaz Giese",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/chazgiese/chazgiese.github.io/issues"
+  "license": "MIT",
+  "main": "assets/js/entry.js",
+  "pre-commit": "lint:staged",
+  "lint-staged": {
+    "*.{js,jsx,json}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{md,scss,html}": [
+      "editorconfig-tools fix",
+      "git add"
+    ]
   },
-  "homepage": "https://github.com/chazgiese/chazgiese.github.io#readme",
+  "scripts": {
+    "lint": "eslint",
+    "lint:staged": "lint-staged",
+    "clean": "shx rm -rf _site/",
+    "scaffold": "npm run clean && shx mkdir -p _site/assets && shx cp -r _assets/img/. _site/assets",
+    "build": "npm run scaffold && cross-env NODE_ENV=production webpack -p --progress && bundle exec jekyll build",
+    "build:debug": "npm run scaffold && webpack --progress -d --verbose && bundle exec jekyll build -t",
+    "start": "npm run scaffold && concurrently -k -n \"WEBPACK,JEKYLL,BROWSER-SYNC\" -c \"bgBlue.bold,bgRed.bold,bgCyan.bold\" \"webpack -w\" \"bundle exec jekyll build --watch\" \"browser-sync start -s _site -f _site --extensions html\""
+  },
   "devDependencies": {
-    "@babel/core": "^7.1.6",
-    "@babel/preset-env": "^7.1.6",
-    "@babel/register": "^7.0.0",
-    "@types/gulp": "^4.0.5",
-    "@types/gulp-babel": "^6.1.29",
-    "@types/gulp-concat": "0.0.32",
-    "@types/gulp-imagemin": "^4.1.1",
-    "@types/gulp-rename": "0.0.33",
-    "@types/gulp-sass": "0.0.31",
-    "@types/gulp-uglify": "^3.0.6",
-    "gulp": "^4.0.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^3.10.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.1"
+    "browser-sync": "^2.18.13",
+    "concurrently": "^3.5.0",
+    "editorconfig-tools": "^0.1.1",
+    "eslint": "^4.4.1",
+    "eslint-config-airbnb": "^16.0.0",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-import-resolver-webpack": "^0.8.3",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.2.0",
+    "eslint-plugin-react": "^7.4.0",
+    "lint-staged": "^4.0.2",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.6.1",
+    "uikit": "^3.0.0-rc.25"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.1.2",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^8.0.1",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "classnames": "^2.2.5",
+    "cross-env": "^5.0.1",
+    "css-loader": "^0.28.4",
+    "exports-loader": "^0.6.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^1.1.5",
+    "imports-loader": "^0.7.1",
+    "node-sass": "^4.5.3",
+    "postcss": "^6.0.8",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.0.6",
+    "prop-types": "^15.5.10",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "sass-loader": "^6.0.6",
+    "shx": "^0.2.2",
+    "webpack": "^3.4.1"
   }
 }
