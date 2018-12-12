@@ -15,13 +15,16 @@ const paths = {
   },
   scripts: {
     src: 'src/scripts/*.js',
-    dest: 'assets/js/'
+    dest: 'assets/js/',
+    uikit: {
+      src: 'node_modules/uikit/dist/js/uikit.js'
+    }
   },
   images: {
     src: 'src/images/*',
     dest: 'assets/images'
   }
-};
+}
 
 export function styles() {
   return gulp.src(paths.styles.src)
@@ -34,7 +37,7 @@ export function styles() {
 }
 
 export function scripts() {
-  return gulp.src(paths.scripts.src, { sourcemaps: true })
+  return gulp.src([paths.scripts.src, paths.scripts.uikit.src], { sourcemaps: true })
     .pipe(babel())
     .pipe(uglify())
     .pipe(concat('main.min.js'))

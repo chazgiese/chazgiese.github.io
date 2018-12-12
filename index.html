@@ -1,45 +1,16 @@
 ---
 ---
-<header class="hero">
-  <div class="container grid-lg">
-    <div class="columns">
-      <div class="column col-6 col-md-12">
-        <h1>Chaz Giese</h1>
-        <p>
-          Hi—I design digital experiences with a focus on fun & beauty. In my freetime I enjoy inspecting the element, scrolling with both hands, and collecting browser tabs.
-        </p>
-        <div class="link-group">
-          {% for link in site.social %}
-            <a class="btn btn-link" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.title }}</a>
-          {% endfor %}
+{% include hero.html  %}
+<section class="uk-section">
+  <div class="uk-container">
+    <div class="uk-grid uk-grid-small uk-child-width-1-2 uk-child-width-1-3@l" uk-grid>
+      {% for item in site.index_items %}
+        <div uk-scrollspy="cls:uk-animation-slide-bottom-medium; delay: 125">
+          <a href="{{ item.url | relative_url }}">
+            <img src="{{ item.thumbnail | relative_url }}" alt="{{ item.title }}">
+          </a>
         </div>
-      </div>
-      <div class="column col-6 col-md-12">
-        <img class="img-responsive" src="{{ site.url | append: '/assets/images/intro6-2x.gif' }}" alt="">
-      </div>
+      {% endfor %}
     </div>
   </div>
-</header>
-
-<div class="container grid-lg">
-  <div class="project-grid columns">
-    <a class="col-6 col-sm-12" href="{{ site.url }}/projects/black-lab-3">
-      <img src="{{ site.url }}/assets/images/thumbnail_black-lab-3.jpg" alt="Black Lab 3">
-    </a>
-    <a class="col-6 col-sm-12" href="{{ site.url }}/projects/remind-plse">
-      <img src="{{ site.url }}/assets/images/thumbnail_remind-plse.jpg" alt="RemindPlse">
-    </a>
-    <a class="col-6 col-sm-12" href="{{ site.url }}/projects/plus-minus">
-      <img src="{{ site.url }}/assets/images/thumbnail_plus-minus.jpg" alt="Plus/Minus">
-    </a>
-    <a class="col-6 col-sm-12" href="{{ site.url }}/projects/on-air">
-      <img src="{{ site.url }}/assets/images/thumbnail_on-air.jpg" alt="On-Air">
-    </a>
-    <a class="col-6 col-sm-12" href="{{ site.url }}/projects/emojigen">
-      <img src="{{ site.url }}/assets/images/thumbnail_emojigen.jpg" alt="EmojiGen">
-    </a>
-    <a class="col-6 col-sm-12" href="./projects/nue-scrolls">
-      <img src="{{ site.url }}/assets/images/thumbnail_nue-scrolls.jpg" alt="Nue Scrolls">
-    </a>
-  </div>
-</div>
+</section>

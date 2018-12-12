@@ -1,4 +1,6 @@
-@import 'vendor/spectre';
+@import "../../node_modules/uikit/src/scss/variables";
+@import "../../node_modules/uikit/src/scss/uikit";
+
 @import 'base/images',
         'base/typography';
 @import 'components/button',

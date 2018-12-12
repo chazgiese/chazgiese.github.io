@@ -1,17 +1,43 @@
 # Site
 name: Chaz Giese
 title: Chaz Giese
-description: Product design for humans, like you!
+description: Digital Product Desginer
 url: https://chazgie.se
 baseurl: ""
+author: Chaz Giese
 email: chazgiese@gmail.com
 social:
   - title: Email
     url: mailto:chazgiese@gmail.com
-  - title: GitHub
-    url: https://github.com/chazgiese
+    attr:
+  - title: Dribbble
+    url: https://dribbble.com/chazgiese
+    attr: target="_blank" rel="noopener"
   - title: LinkedIn
     url: https://linkedin.com/in/chazgiese
+    attr: target="_blank" rel="noopener"
+google_analytics: 'UA-25650802-5'
+
+# Index Items
+index_items:
+  - title: Black Lab 3
+    url: /projects/black-lab-3
+    thumbnail: /assets/images/thumbnail_black-lab-3.jpg
+  - title: RemindPlse
+    url: /projects/remind-plse
+    thumbnail: /assets/images/thumbnail_remind-plse.jpg
+  - title: On-Air
+    url: /projects/on-air
+    thumbnail: /assets/images/thumbnail_on-air.jpg
+  - title: Plus/Minus
+    url: /projects/plus-minus
+    thumbnail: /assets/images/thumbnail_plus-minus.jpg
+  - title: EmojiGen
+    url: /projects/emojigen
+    thumbnail: /assets/images/thumbnail_emojigen.jpg
+  - title: Nue Scrolls
+    url: /projects/nue-scrolls
+    thumbnail: /assets/images/thumbnail_nue-scrolls.jpg
 
 # Build
 markdown: kramdown
