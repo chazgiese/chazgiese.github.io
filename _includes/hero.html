@@ -12,13 +12,9 @@
         <span>Brooklyn, NY</span>
       </div>
       <div class="panel__item panel__item--links">
-        <div>
           {% for item in site.social %}
-            <div>
-              <a href="{{ item.url }}" {{ item.attr }}>{{ item.title }}</a>
-            </div>
+              <a class="uk-icon uk-padding-small uk-button uk-button-text" href="{{ item.url }}" {{ item.attr }} uk-icon="icon: {{ item.icon }}; ratio: 2;"></a>
           {% endfor %}
-        </div>
       </div>
     </div>
 </div>

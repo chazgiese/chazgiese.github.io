@@ -2,6 +2,7 @@
 _site
 .sass-cache
 .jekyll-metadata
+src/images
 
 # Node
 node_modules/

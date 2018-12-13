@@ -1,5 +1,6 @@
-@import "../../node_modules/uikit/src/scss/variables";
-@import "../../node_modules/uikit/src/scss/uikit";
+@import '../../node_modules/uikit/src/scss/variables';
+@import 'base/variables';
+@import '../../node_modules/uikit/src/scss/uikit';
 
 @import 'base/images',
         'base/typography';
@@ -7,7 +8,7 @@
         'components/hero';
 @import 'layout/footer',
         'layout/grid',
+        'layout/homepage',
         'layout/navbar';
-@import 'pages/about',
-        'pages/project';
+@import 'pages/project';
 @import 'themes/dark-mode';

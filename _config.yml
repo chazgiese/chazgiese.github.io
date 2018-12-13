@@ -9,12 +9,15 @@ email: chazgiese@gmail.com
 social:
   - title: Email
     url: mailto:chazgiese@gmail.com
-    attr:
+    icon: mail
+    attr: target="_blank" rel="noopener"
   - title: Dribbble
     url: https://dribbble.com/chazgiese
+    icon: dribbble
     attr: target="_blank" rel="noopener"
   - title: LinkedIn
     url: https://linkedin.com/in/chazgiese
+    icon: linkedin
     attr: target="_blank" rel="noopener"
 google_analytics: 'UA-25650802-5'
 

@@ -1,13 +1,9 @@
-.navbar {
-  background: #F4E8DA;
-  margin-bottom: 24px;
-  padding: 12px;
+.uk-navbar-nav > li > a {
+  color: #000;
+  font-family: 'Poppins';
+  font-weight: 700;
+}
 
-  a,
-  a:visited,
-  a:focus,
-  a:active{
-    color: #000 !important;
-    box-shadow: none;
-  }
+.nav-logo {
+  max-width: 32px;
 }

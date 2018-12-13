@@ -1,12 +1,14 @@
 .main-hero {
-  min-height: 60vh;
-  padding: 16px 8px 24px;
+  background: #F4E8DA;
+  box-sizing: border-box;
+  color: #000;
   display: flex;
   flex-flow: row wrap;
-  overflow: auto;
-  color: #000;
+  font-family: 'Poppins';
   font-size: 4.5vw;
-  background: #F4E8DA;
+  min-height: 65vh;
+  overflow: auto;
+  padding: 16px 8px 24px;
 }
 
 .main-hero .panel {
@@ -24,7 +26,7 @@
 .main-hero h1 {
   color: #000;
   font-size: inherit;
-  font-weight: inherit;
+  font-weight: 500;
   transform: rotate(90deg);
   transform-origin: center;
   transition: transform 250ms ease;
@@ -51,6 +53,7 @@
   flex-grow: 1;
   flex-shrink: 0;
   font-size: 4.75vw;
+  font-weight: 700;
 }
 
 .main-hero .panel__item--about, .panel__item--links {
@@ -66,10 +69,6 @@
 
   .main-hero .panel__item--about {
     font-size: 3vw;
-  }
-
-  .main-hero h1 {
-    transform: rotate(135deg)
   }
 
 }
