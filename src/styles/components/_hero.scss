@@ -26,7 +26,7 @@
 .main-hero h1 {
   color: #000;
   font-size: inherit;
-  font-weight: 500;
+  font-weight: 700;
   transform: rotate(90deg);
   transform-origin: center;
   transition: transform 250ms ease;
@@ -67,8 +67,16 @@
     padding: 40px 16px;
   }
 
+  .main-hero .panel--top {
+    align-items: flex-start;
+  }
+
   .main-hero .panel__item--about {
     font-size: 3vw;
+  }
+
+  .main-hero h1 {
+    transform: rotate(0deg);
   }
 
 }
