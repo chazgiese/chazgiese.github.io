@@ -1,8 +1,2 @@
-# Jekyll
-_site
-.sass-cache
-.jekyll-metadata
-src/images
-
-# Node
+dist/
 node_modules/
